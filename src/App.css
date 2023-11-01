@@ -281,3 +281,110 @@ input::placeholder {
 .amuPrmListContainer {
   margin-top: 9px;
 }
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+.countCard {
+  width: 300px;
+  height: 109px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 1px solid rgba(85, 113, 83, 0.15);
+  background: #fff;
+  box-shadow: 2px 2px 16px 0px rgba(10, 58, 103, 0.12);
+}
+.countCardsContainer {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.countGraphCardsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.countCard {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+  height: 109px;
+  /* justify-content: space-between; */
+  padding-inline: 20px;
+  padding-block-start: 20px;
+  padding-block-end: 15px;
+}
+.countCardLabel {
+  font-weight: 400;
+  font-size: 14px;
+  /* padding-inline-end: 10px; */
+}
+.countCardNumber {
+  color: rgba(85, 113, 83, 0.6);
+  font-size: 24px;
+  font-weight: 700;
+  /* margin-top: 5px; */
+}
+.countCard > hr {
+  width: 300px;
+  margin-top: 10px;
+
+  height: 1px;
+  background: rgba(85, 113, 83, 0.15);
+}
+
+.countValuation {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 157px;
+  padding-block: 20px;
+  padding-inline: 20px;
+  gap: 21px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 1px solid var(--blue-15, rgba(10, 58, 103, 0.15));
+  background: #fff;
+  box-shadow: 2px 2px 16px 0px rgba(10, 58, 103, 0.12);
+}
+.labelNumberContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 11px;
+  padding-inline: 10px;
+
+  /* background-color: red; */
+}
+.hLine {
+  border-bottom: 1px solid rgba(156, 133, 133, 0.15);
+}
+.countCardLabelValuation {
+  color: var(--blue-60, rgba(10, 58, 103, 0.6));
+  /* padding-block-end: ; */
+}
+.aiVerifiedContainerLabel {
+  color: rgba(198, 61, 47, 0.6);
+}
+.aiVerifiedContainerNumber {
+  color: #c63d2f;
+}
+.aiVerifiedContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.pmrContainerLabel {
+  color: rgba(53, 162, 159, 0.6);
+}
+.pmrContainerNumber {
+  color: #35a29f;
+}
+.pmrContainer {
+  display: flex;
+  justify-content: space-between;
+}
