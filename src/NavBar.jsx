@@ -79,7 +79,7 @@ const NavBar = () => {
             />
           </svg>
         </div>
-        <div>
+        <div id="menu" style={{ cursor: "pointer" }}>
           <svg
             width="54"
             height="54"
