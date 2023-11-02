@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import userIcon from "./assets/user-icon.png";
-import { GoSearch } from "react-icons/go";
 
-import { FaArrowLeft, FaPlus, FaRegBell } from "react-icons/fa6";
+import { FaArrowLeft } from "react-icons/fa6";
 
 const NavBar = () => {
   const [serach, setSearch] = useState("");
@@ -67,8 +66,7 @@ const NavBar = () => {
           </svg>
           <span className="addButtonText">Add</span>
         </div>
-        <div>
-          {" "}
+        <div style={{ display: "flex" }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="54"
@@ -95,7 +93,7 @@ const NavBar = () => {
             />
           </svg>
         </div>
-        <div id="menu" style={{ cursor: "pointer" }}>
+        <div id="menu" style={{ display: "flex", cursor: "pointer" }}>
           <svg
             width="54"
             height="54"

@@ -276,6 +276,12 @@ input::placeholder {
 
 .amuBranchListContainer {
   margin-top: 9px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding-right: 13px;
+  padding-block-end: 14px;
+  padding-inline-start: 16px;
 }
 
 .amuPrmListContainer {
@@ -345,7 +351,7 @@ input::placeholder {
   height: 157px;
   padding-block: 20px;
   padding-inline: 20px;
-  gap: 21px;
+  gap: 14px;
   flex-shrink: 0;
   border-radius: 30px;
   border: 1px solid var(--blue-15, rgba(10, 58, 103, 0.15));
@@ -370,12 +376,22 @@ input::placeholder {
 }
 .aiVerifiedContainerLabel {
   color: rgba(198, 61, 47, 0.6);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .aiVerifiedContainerNumber {
   color: #c63d2f;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 .aiVerifiedContainer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .pmrContainerLabel {
@@ -383,8 +399,46 @@ input::placeholder {
 }
 .pmrContainerNumber {
   color: #35a29f;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 .pmrContainer {
   display: flex;
   justify-content: space-between;
+}
+
+.amuBranchContent {
+  color: var(--dark-blue, #122452);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 10%;
+}
+.amuBranchGreenBg {
+  padding: 2px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  background: rgba(96, 189, 89, 0.1);
+}
+.amuBranchGreenBg {
+  display: flex;
+  justify-content: space-between;
+}
+.amuBranchContentRs {
+  color: #60bd59;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.amuHr {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid rgba(10, 58, 103, 0.15);
 }

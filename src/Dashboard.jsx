@@ -1,28 +1,28 @@
 import React from "react";
-import Chart from "react-apexcharts";
+// import Chart from "react-apexcharts";
 
-const chartSeries = [44, 55];
+// const chartSeries = [44, 55];
 
-const chartOption = {
-  chart: {
-    height: 350,
-    type: "radialBar",
-  },
-  plotOptions: {
-    radialBar: {
-      dataLabels: {
-        name: {
-          fontSize: "22px",
-        },
-        value: {
-          fontSize: "16px",
-        },
-      },
-    },
-  },
-  colors: ["#9C8585", "#AB88BF"],
-  labels: ["Apples", "Oranges"],
-};
+// const chartOption = {
+//   chart: {
+//     height: 350,
+//     type: "radialBar",
+//   },
+//   plotOptions: {
+//     radialBar: {
+//       dataLabels: {
+//         name: {
+//           fontSize: "22px",
+//         },
+//         value: {
+//           fontSize: "16px",
+//         },
+//       },
+//     },
+//   },
+//   colors: ["#9C8585", "#AB88BF"],
+//   labels: ["Apples", "Oranges"],
+// };
 
 const listOfOption = [
   {
@@ -280,6 +280,72 @@ const countStatistics = [
     statisticsNumberColor: "#9C8585",
   },
 ];
+
+const aumByPrmListItems = [
+  {
+    aumBranchName: "Nalini",
+    aumBranchRs: "₹ 1.15Cr",
+    aumBranchIncomeRs: "₹ 1.15Cr",
+    id: 11111,
+  },
+  {
+    aumBranchName: "Rema",
+    aumBranchRs: "₹ 1.15Cr",
+    aumBranchIncomeRs: "₹ 1.15Cr",
+    id: 22222,
+  },
+  {
+    aumBranchName: "Arun",
+    aumBranchRs: "₹ 1.15Cr",
+    aumBranchIncomeRs: "₹ 1.15Cr",
+    id: 3333333,
+  },
+  {
+    aumBranchName: "Deepak",
+    aumBranchRs: "₹ 1.15Cr",
+    aumBranchIncomeRs: "₹ 1.15Cr",
+    id: 444444,
+  },
+  {
+    aumBranchName: "Ashwini",
+    aumBranchRs: "₹ 1.15Cr",
+    aumBranchIncomeRs: "₹ 1.15Cr",
+    id: 555555555,
+  },
+];
+
+const aumByBranchListItems = [
+  {
+    aumBranchName: "Bangalore",
+    aumBranchRs: "₹ 1.15Cr",
+    aumBranchIncomeRs: "₹ 1.15Cr",
+    id: 11111,
+  },
+  {
+    aumBranchName: "Mumbai",
+    aumBranchRs: "₹ 1.15Cr",
+    aumBranchIncomeRs: "₹ 1.15Cr",
+    id: 22222,
+  },
+  {
+    aumBranchName: "Delhi",
+    aumBranchRs: "₹ 1.15Cr",
+    aumBranchIncomeRs: "₹ 1.15Cr",
+    id: 3333333,
+  },
+  {
+    aumBranchName: "Hyderabad",
+    aumBranchRs: "₹ 1.15Cr",
+    aumBranchIncomeRs: "₹ 1.15Cr",
+    id: 444444,
+  },
+  {
+    aumBranchName: "Chennai",
+    aumBranchRs: "₹ 1.15Cr",
+    aumBranchIncomeRs: "₹ 1.15Cr",
+    id: 555555555,
+  },
+];
 // dashbard container
 // - left
 //    - side menu
@@ -324,6 +390,7 @@ const Card = ({ label, description, children }) => {
               <span>Filter</span>
             </div>
             <div className={"actionBtn dayBtn"}>
+              <span>Today</span>
               <svg
                 width="12"
                 height="7"
@@ -336,8 +403,6 @@ const Card = ({ label, description, children }) => {
                   fill="#0A3A67"
                 />
               </svg>
-
-              <span>Today</span>
             </div>
           </div>
         </div>
@@ -553,7 +618,16 @@ const Dashboard = () => {
               "Insights of AUM of different branches handled by PRMs."
             }
           >
-            <div className="amuBranchListContainer"></div>
+            <div className="aumByBrachListItems">
+              {aumByBranchListItems.map(({ aumBranchName, id }, index) => {
+                return (
+                  <>
+                    {index !== 0 && <div className="amuHr" />}
+                    <Accordin key={id} aumName={aumBranchName} />
+                  </>
+                );
+              })}
+            </div>
           </Card>
           <Card
             label="AUM by PRM"
@@ -561,9 +635,70 @@ const Dashboard = () => {
               "Insights of AUM of different branches handled by PRMs."
             }
           >
-            <div className="amuPrmListContainer">Sub2 list item</div>
+            <div className="amuPrmListContainer">
+              {aumByPrmListItems.map(({ aumBranchName, id }, index) => {
+                return (
+                  <>
+                    {index !== 0 && <div className="amuHr" />}
+                    <Accordin key={id} aumName={aumBranchName} />
+                  </>
+                );
+              })}
+            </div>
           </Card>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const Accordin = ({ aumName }) => {
+  return (
+    <div className="amuBranchListContainer">
+      <div className="amuBranchContent">{aumName}</div>
+      <div className="amuBranchContent">₹ 1.15Cr</div>
+      <div className="amuBranchGreenBg">
+        <div className="amuBranchPlusIcon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+          >
+            <path
+              d="M6 1V11"
+              stroke="#60BD59"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M1 6H11"
+              stroke="#60BD59"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div className="amuBranchContentRs">₹ 1.04L</div>
+      </div>
+      <div className="amuBranchDrpdown">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+        >
+          <path
+            d="M13 1L7 7L1 1"
+            stroke="#0A3A67"
+            stroke-opacity="0.6"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </div>
     </div>
   );
