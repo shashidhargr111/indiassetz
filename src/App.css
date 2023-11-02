@@ -280,7 +280,6 @@ input::placeholder {
   gap: 16px;
   justify-content: space-between;
   padding-right: 13px;
-  padding-block-end: 14px;
   padding-inline-start: 16px;
 }
 
@@ -439,6 +438,7 @@ input::placeholder {
 }
 .amuHr {
   display: flex;
-  gap: 16px;
+  margin-top: 14px;
+  margin-bottom: 14px;
   border-bottom: 1px solid rgba(10, 58, 103, 0.15);
 }
